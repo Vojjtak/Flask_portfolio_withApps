@@ -1,7 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, request
-
 import downloader
 from downloader import *
+import json
 
 app = Flask(__name__)
 
@@ -27,8 +27,11 @@ def contact():
 @app.route("/downloader", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
+        video = YouTube(request.form["url"])
+        title = video.title
+        thumbnail = video.thumbnail_url
         downloader.DownloadVideo().download(request.form["url"])
-        return render_template("/apps/downloader.html")
+        return render_template("/apps/downloader.html", title=title, thumbnail=thumbnail)
     else:
         return render_template("/apps/downloader.html")
 

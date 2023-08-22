@@ -1,10 +1,11 @@
 {% extends "base.html" %}
-{% block title %}Ytb Downdload{% endblock %}
+{% block title %}Ytb Download{% endblock %}
 
 {% block content %}
 <head>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/aboutme_styles.css')}}">
 </head>
+
 
 <header id="about-me">
         <div class="nav-bar row">
@@ -13,6 +14,7 @@
             </div>
             <nav>
                 <ul>
+                    <li><a href="http://127.0.0.1:5000/">Home</a></li>
                     <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
                     <li><a href="http://127.0.0.1:5000/projects">Projects</a></li>
                     <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
@@ -20,12 +22,19 @@
                 <div class="clearfix"></div>
             </nav>
         </div>
-</header>
 
-  <form action="#" method="post">
-    <p>Video URL:</p>
-    <p><input type="text" name="url"></p>
-    <p><input type="submit" value="yes"></p>
-    <p><input type="submit" value="no"></p>
-  </form>
+
+    <div class="download-form">
+          <form action="#" method="post">
+                <p>Video URL:</p>
+                <input type="text" name="url">
+                <input type="submit" value="yes"><br>
+                      {% if request.method == "POST" %}
+                      <p id="title">{{ title }}</p>
+                      <img src="{{ thumbnail }}" alt="" id="thumbnail">
+                      {% endif %}
+          </form>
+    </div>
+
+</header>
 {% endblock %}

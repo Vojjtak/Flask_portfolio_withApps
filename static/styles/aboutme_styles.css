@@ -123,6 +123,26 @@ header p {
     font-family: Arial;
 }
 
+/*** Video downloader YTB ***/
+
+.download-form {
+    text-align: center;
+}
+
+.download-form input {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+#title {
+    font-size: 40px;
+}
+
+#thumbnail {
+    width: 250px;
+}
+
 /*** Footer ***/
 
 .footer-page {

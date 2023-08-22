@@ -7,14 +7,9 @@ class DownloadVideo:
     def __init__(self):
         self.directory = tk.filedialog.askdirectory()
 
-    def get_title(self):
-        video = YouTube(self.url)
+    def get_title(self, url):
+        video = YouTube(url)
         title = video.title
-        print(title)
-
-    def acces(self):
-        agreement = input("Is this title of your video? ")
-        return agreement
 
     def download(self, url):
         video = YouTube(url)
