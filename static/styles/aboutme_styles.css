@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*** reusable ***/
+.row {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.heading-main h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.heading-main h2:after {
+    content: "";
+    display: block;
+    width: 150px;
+    border-bottom: 5px solid #D67949;
+    margin: 20px auto;
+}
+
+/*** header ***/
+
+header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(/static/images/bck-header.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+#logo img{
+    float: left;
+    width: 5%;
+    margin-top: 10px;
+}
+nav ul {
+    float: right;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    transition: border-bottom 1s;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    transition: border-bottom 0.5s;
+    border-bottom: 2px solid #D67949;
+}
+
+/*** Stop floating ***/
+.clearfix{zoom: 1}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.heading-main h2 {
+    color: white;
+}
+
+header p {
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+
+}
+
+.project-links a{
+    display: block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.project-links a:hover {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    text-shadow: 4px 4px 10px white;
+}
+
+.contact-me {
+    color: white;
+    display: block;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.contact-me input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    margin-top: 20px;
+}
+
+.contact-me textarea {
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    margin-top: 20px;
+    font-family: Arial;
+}
+
+/*** Footer ***/
+
+.footer-page {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(/static/images/bck-header.jpg);
+    opacity: 0.7;
+    margin-top: 0;
+}
+
+.socials p {
+    text-align: center;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+.footer-text {
+    color: white;
+    text-align: center;
+}

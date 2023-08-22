@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Homepage{% endblock %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/aboutme_styles.css')}}">
+</head>
+
+<header id="about-me">
+        <div class="nav-bar row">
+            <div id="logo">
+                <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                    <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
+                    <li><a href="http://127.0.0.1:5000/projects">Projects</a></li>
+                    <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </nav>
+        </div>
+        <div class="heading-main">
+            <h2>My projects</h2>
+                <div class="project-links row">
+                    <a href="http://127.0.0.1:5000/downloader">Ytb - downloader</a>
+                    <a href="http://127.0.0.1:5000/downloader">Next-project</a>
+                    <a href="http://127.0.0.1:5000/downloader">Next-project</a>
+                </div>
+        </div>
+
+</header>
+
+<footer class="footer-page">
+    <div class="row">
+        <div class="socials">
+            <p><a href="#" target="_blank">Facebook</a></p>
+            <p><a href="#" target="_blank">Instagram</a></p>
+        </div>
+
+        <div class="footer-text">
+            <p>Nečum sem</p>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

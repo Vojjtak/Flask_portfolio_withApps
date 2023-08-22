@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/grid.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/lightbox.min.css')}}">
+    <link rel="stylesheet" href="queries.css">
+    <script src="{{url_for('static', filename='js/lightbox-plus-jquery.min.js')}}"></script>
+    <title>Vojjtak's Portfolio Website</title>
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/pepe.png')}}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+        {% block content %}
+        {% endblock %}
+</body>
+</html>

@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/****  reusable ****/
+.row {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.heading-main h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.heading-main h2:after {
+    content: "";
+    display: block;
+    width: 150px;
+    border-bottom: 5px solid #D67949;
+    margin: 20px auto;
+}
+
+/**** header ****/
+header {
+
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(/static/images/bck-header.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+#logo img{
+    float: left;
+    width: 5%;
+    margin-top: 10px;
+}
+nav ul {
+    float: right;
+}
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    transition: border-bottom 1s;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    transition: border-bottom 0.5s;
+    border-bottom: 2px solid #D67949;
+}
+.header-name {
+    display: block;
+    margin: 0 auto;
+}
+
+.header-name h1 {
+    display: block;
+    width: 500px;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 5px 5px 5px black;
+    margin-top: 200px;
+}
+
+.socials a img {
+    display: inline-block;
+    width: 100%;
+    margin: 20px auto 0 0;
+    padding: 0 0;
+}
+
+.socials img:hover {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
+.socials a:link,
+.socials a:visited {
+    display: inline-block;
+    width: 30px;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 2px 2px 5px black;
+    margin-right: 24px;
+    padding: 0 0;
+}
+
+.socials a img:hover,
+.socials a img:active {
+    background: #D67949;
+    border-radius: 10px;
+    margin-right: 24px;
+    padding: 0 0;
+    transition: background 0.5s;
+    animation: rotate 1s;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.me-front-image img{
+    width: 20%;
+    float: right;
+    display: block;
+    margin-top: 0;
+}
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/**** About me - main ****/
+
+.about-me {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(/static/images/bck-header.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+
+/**** About us ****/
+
+.projects img {
+    max-width: 50%;
+    border-radius: 5px;
+    box-shadow: 1px -1px 6px black;
+    display: block;
+    margin: 0 auto;
+}
+
+.me-more img {
+    width: 50%;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-o-mne {
+    max-width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.text-o-mne div {
+   width: 50px;
+   height: 50px;
+   border: 2px solid black;
+   text-align: center;
+   border-radius: 50%;
+   padding: 13px;
+   float: left;
+}
+
+.text-o-mne p {
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+/*** References ***/
+
+.references {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(/static/images/bck-header.jpg);
+    background-attachment: fixed;
+}
+
+.references h2 {
+    color: white;
+    padding-top: 40px;
+}
+
+.references h2:after {
+    border-bottom: 5px solid white;
+}
+
+.one-reference {
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+
+.one-reference p {
+    width: 100%;
+    font-style: italic;
+}
+
+.photo-name {
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+.photo-name p {
+    padding: 30px;
+    margin-left: 40px;
+    font-style: normal;
+}
+
+.photo-name img {
+    width: 20%;
+    border-radius: 80%;
+    float: left;
+}
+/*** Photo-gallery ***/
+
+.photo-segment li {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.photo-segment img {
+    width: 50%;
+    opacity: 1;
+    transform: scale(1.15);
+    display: block;
+    margin: 0 auto;
+}
+
+/* .photo-segment img:hover {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s; */
+
+
+/*** Footer ***/
+
+.footer-page {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(/static/images/bck-header.jpg);
+    opacity: 0.7;
+    margin-top: 0;
+}
+
+.socials p {
+    text-align: center;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+.footer-text {
+    color: white;
+    text-align: center;
+}
+
+/*** Stop floating ***/
+.clearfix{zoom: 1}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
