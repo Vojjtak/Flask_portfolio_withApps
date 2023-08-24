@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Ytb Download{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/aboutme_styles.css')}}">
+</head>
+
+
+<header class="about-me">
+    <div class="heading-main">
+        <h2>YTB downloader - 1st version</h2>
+    </div>
+
+
+
+    <div class="download-form">
+        <form id="search-form" method="post" action="/downloader">
+                <input type="text" id="url-input" name="url"><br>
+            <div id="search">
+                <input type="submit" value="Search video" name="submit">
+            </div><br>
+
+
+
+            <div id="title" class="video-title">
+               <!-- <img src="{{ thumbnail }}" id="thumbnail" alt=""><br>
+                <p>{{title}}</p><br> -->
+
+            </div>
+                <img id="thumbnail" src="" alt="">
+            <div id="download">
+                <input type="submit" value="Download video">
+            </div>
+        </form>
+    </div>
+
+
+
+</header>
+
+{% endblock %}

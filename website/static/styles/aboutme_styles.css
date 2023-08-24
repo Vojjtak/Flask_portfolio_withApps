@@ -26,6 +26,10 @@
 
 /*** header ***/
 
+.hidden {
+    display: none;
+}
+
 header {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url(/static/images/bck-header.jpg);
@@ -137,6 +141,7 @@ header p {
 
 #title {
     font-size: 40px;
+    color: white;
 }
 
 #thumbnail {

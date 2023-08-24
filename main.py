@@ -1,14 +1,17 @@
-from flask import Flask, redirect, url_for, render_template, request
+from flask import Flask, redirect, url_for, render_template, request, jsonify
 import downloader
 from downloader import *
 import json
 
-app = Flask(__name__)
 
+app = Flask(__name__, template_folder='website/templates',
+            static_folder='website/static')
+
+app.jinja_env.autoescape = True
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template('index.html')
 
 
 @app.route("/about_me")
@@ -20,25 +23,32 @@ def aboutme():
 def projects():
     return render_template("projects.html")
 
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
 
+
 @app.route("/downloader", methods=["POST", "GET"])
-def login():
+def search():
+    if request.method == "POST":
+        video = YouTube(request.form["url"])
+        title = video.title
+        url = request.form["url"]
+        thumbnail = video.thumbnail_url
+        return render_template("downloader.html", url=url, title=title, thumbnail=thumbnail)
+    else:
+        return render_template("downloader.html")
+
+@app.route('/get_title', methods=['POST'])
+def get_title_and_thumbnail():
     if request.method == "POST":
         video = YouTube(request.form["url"])
         title = video.title
         thumbnail = video.thumbnail_url
-        downloader.DownloadVideo().download(request.form["url"])
-        return render_template("/apps/downloader.html", title=title, thumbnail=thumbnail)
-    else:
-        return render_template("/apps/downloader.html")
+        return jsonify({'title': title, 'thumbnail': thumbnail})
 
 
-def download(video):
-    dwnld = downloader.DownloadVideo.download(video)
-    return dwnld
 
 
 if __name__ == "__main__":
