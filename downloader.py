@@ -1,6 +1,28 @@
 import tkinter as tk
 import tkinter.filedialog
 from pytube import YouTube
+import sqlite3
+
+
+def data_save(url):
+    video = YouTube(url)
+    title = video.title
+    db = (title, url)
+    connection = sqlite3.connect("database.db")
+    cursor = connection.cursor()
+    cursor.execute("insert into downloads values (?,?)", db)
+    connection.commit()
+    connection.close()
+
+
+def data():
+    connection = sqlite3.connect("database.db")
+    cursor = connection.cursor()
+    selection = cursor.execute('SELECT * FROM downloads')
+    list = []
+    for i in selection:
+        list.append(i)
+    return list
 
 
 class DownloadVideo:
@@ -20,5 +42,4 @@ class DownloadVideo:
 
 
 if __name__ == "__main__":
-    dwn = DownloadVideo()
-    dwn.download()
+    data()

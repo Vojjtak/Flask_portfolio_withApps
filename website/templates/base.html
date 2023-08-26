@@ -2,19 +2,26 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
+<!-- View -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Grid -->
     <link rel="stylesheet" href="{{url_for('static', filename='styles/grid/grid.css')}}">
+
+<!-- Lightbox photo gallery (not using yet) -->
     <link rel="stylesheet" href="{{url_for('static', filename='styles/lightbox.min.css')}}">
-    <link rel="stylesheet" href="queries.css">
     <script src="{{url_for('static', filename='js/lightbox-plus-jquery.min.js')}}"></script>
-    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/pepe.png')}}">
 
+<!-- Title image -->
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/harold.png')}}">
 
+<!-- Jquery - using for downloader to non-refresh -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
             integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
             crossorigin="anonymous"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 
+<!-- Title -->
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>

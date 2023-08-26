@@ -1,6 +1,8 @@
 $(function() {
     $("#download").hide();
 
+    displayData();
+
     $("#search-form").submit(function(event) {
         event.preventDefault();
         var url = $("#url-input").val();
@@ -9,9 +11,11 @@ $(function() {
             .then(function(response) {
                 var title = response.title;
                 var thumbnail = response.thumbnail;
+
                 $("#title").text(title).show();
                 $("#thumbnail").attr("src", thumbnail).show();
                 $("#download").show();
+
 
                 // Set the URL in the hidden input field
                 $("#hidden_url").val(url);
@@ -27,6 +31,7 @@ $(function() {
         downloadVideo(url);
     });
 });
+
 
 
 function fetchTitleAndThumbnail(url) {
@@ -51,4 +56,20 @@ function downloadVideo(url) {
         }
     });
 }
+
+function displayData() {
+    $.ajax({
+        url: '/data',
+        type: 'GET',
+        success: function(response) {
+            var textData = response.data_of_video;
+            console.log("Downloaded video:", textData); // Use textData here, not data_of_video
+            $('#data').text(textData);
+        },
+        error: function(error) {
+            console.log("Error fetching data:", error); // Change the error message
+        }
+    });
+}
+
 

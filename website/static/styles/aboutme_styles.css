@@ -148,6 +148,12 @@ header p {
     font-size: 30px;
 }
 
+#data {
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+}
+
 /*** Footer ***/
 
 .footer-page {
