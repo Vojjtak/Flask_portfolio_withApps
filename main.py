@@ -1,13 +1,10 @@
 from flask import Flask, redirect, url_for, render_template, request, jsonify
-import downloader
-from downloader import *
-import json
 
+from downloader import *
 
 app = Flask(__name__, template_folder='website/templates',
             static_folder='website/static')
 
-app.jinja_env.autoescape = True
 
 @app.route("/")
 def home():
@@ -15,7 +12,7 @@ def home():
 
 
 @app.route("/about_me")
-def aboutme():
+def about():
     return render_template("about-me.html")
 
 
@@ -31,14 +28,8 @@ def contact():
 
 @app.route("/downloader", methods=["POST", "GET"])
 def search():
-    if request.method == "POST":
-        video = YouTube(request.form["url"])
-        title = video.title
-        url = request.form["url"]
-        thumbnail = video.thumbnail_url
-        return render_template("downloader.html", url=url, title=title, thumbnail=thumbnail)
-    else:
-        return render_template("downloader.html")
+    return render_template("downloader.html")
+
 
 @app.route('/get_title', methods=['POST'])
 def get_title_and_thumbnail():
@@ -49,7 +40,14 @@ def get_title_and_thumbnail():
         return jsonify({'title': title, 'thumbnail': thumbnail})
 
 
+@app.route('/download', methods=['POST'])
+def download():
+    if request.method == "POST":
+        url = YouTube(request.form["url"])
+        video = DownloadVideo().download(url)
+        return jsonify({'video': video})
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+

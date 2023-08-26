@@ -6,37 +6,66 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/aboutme_styles.css')}}">
 </head>
 
-
 <header class="about-me">
-    <div class="heading-main">
-        <h2>YTB downloader - 1st version</h2>
+    <div class="nav-bar row">
+        <div class="nav-bar row">
+                <div id="logo">
+                    <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                        <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
+                        <li><a href="http://127.0.0.1:5000/projects">Projects</a></li>
+                        <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </nav>
+            </div>
+
+        <div class="heading-main">
+            <h2>YTB downloader - 1st version</h2>
+        </div>
     </div>
 
+    <!-- search text and button -->
+    <div class="search">
+        <form id="search-form" method="post">
 
+            <input type="text" id="url-input" name="url"><br>
+            <input type="submit" value="Search video" name="submit">
+        </form><br>
+    </div>
 
-    <div class="download-form">
-        <form id="search-form" method="post" action="/downloader">
-                <input type="text" id="url-input" name="url"><br>
-            <div id="search">
-                <input type="submit" value="Search video" name="submit">
-            </div><br>
+    <!-- display title and thumbnail -->
+    <div class="display">
+        <div id="title" class="video-title"></div>
+        <img id="thumbnail" src="" alt="">
+    </div>
 
+    <!-- download button -->
+    <div id="download" >
+        <form id="video-download-form" method="post">
 
+            <input type="hidden" value="Download video" name="submit">
+            <button type="button" id="download-button">Download video</button>
 
-            <div id="title" class="video-title">
-               <!-- <img src="{{ thumbnail }}" id="thumbnail" alt=""><br>
-                <p>{{title}}</p><br> -->
-
-            </div>
-                <img id="thumbnail" src="" alt="">
-            <div id="download">
-                <input type="submit" value="Download video">
-            </div>
         </form>
     </div>
 
-
-
 </header>
+
+<footer class="footer-page">
+        <div class="row">
+            <div class="socials">
+                <p><a href="#" target="_blank">Facebook</a></p>
+                <p><a href="#" target="_blank">Instagram</a></p>
+            </div>
+
+            <div class="footer-text">
+                <p>Nečum sem</p>
+            </div>
+        </div>
+</footer>
 
 {% endblock %}

@@ -33,17 +33,19 @@ header {
     background-attachment: fixed;
 }
 
-#logo img{
-    float: left;
-    width: 5%;
-    margin-top: 10px;
+header img {
+    max-width: 100%;
+    height: auto;
 }
+
+
 nav ul {
     float: right;
+    margin-top: 20px;
 }
 nav ul li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 10px;
 }
 
@@ -61,24 +63,25 @@ nav ul li a:active {
     transition: border-bottom 0.5s;
     border-bottom: 2px solid #D67949;
 }
+
 .header-name {
+    width: 10%;
     display: block;
     margin: 0 auto;
 }
 
 .header-name h1 {
     display: block;
-    width: 500px;
-    font-size: 50px;
+    width: 10%;
     color: #fff;
     text-shadow: 5px 5px 5px black;
-    margin-top: 200px;
+    margin-top: 25%;
+    margin-left: 10%;
 }
 
-.socials a img {
+.header-name a {
     display: inline-block;
-    width: 100%;
-    margin: 20px auto 0 0;
+    margin: 20px 50% 0 0;
     padding: 0 0;
 }
 
@@ -91,7 +94,6 @@ nav ul li a:active {
 .socials a:link,
 .socials a:visited {
     display: inline-block;
-    width: 30px;
     text-decoration: none;
     color: #fff;
     text-shadow: 2px 2px 5px black;
@@ -114,11 +116,11 @@ nav ul li a:active {
   100% { transform: rotate(360deg); }
 }
 
-.me-front-image img{
-    width: 20%;
+#front-image {
     float: right;
     display: block;
-    margin-top: 0;
+    margin-top: 25%;
+    margin-right: 10%;
 }
 
 

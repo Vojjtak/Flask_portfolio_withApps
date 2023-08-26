@@ -1,43 +1,51 @@
 {% extends "base.html" %}
-{% block title %}Homepage{% endblock %}
+{% block title %}Vojjtak's portfolio Flask website{% endblock %}
 {% block content %}
-<head><link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/style.css')}}"></head>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/index.css')}}">
+</head>
+
  <header>
-        <div class="nav-bar row">
-            <div id="logo">
-                <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="http://127.0.0.1:5000/">Home</a></li>
-                    <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
-                    <li><a href="http://127.0.0.1:5000/projects">Projects</a></li>
-                    <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
-                </ul>
-                <div class="clearfix"></div>
-            </nav>
-        </div>
 
-            <div class="header-name row col span-1-of-2">
-                <h1>Vojtěch Dostál</h1>
-                <div class="socials">
-                    <a href="https://github.com/Vojjtak" target=”_blank”><img  src="{{ url_for('static', filename='images/github.png')}}" alt=""></a>
-                    <a href="https://www.linkedin.com/in/vojt%C4%9Bch-dost%C3%A1l-1418a5280/" target=”_blank”><img src="{{ url_for('static', filename='images/linked-in.png')}}" alt=""></a>
-                    <a href="https://www.instagram.com/wojjtak/" target=”_blank”><img  src="{{ url_for('static', filename='images/instagram.png')}}" alt=""></a>
-                    <a href="https://www.facebook.com/vojtak.dostal/" target=”_blank”><img  src="{{ url_for('static', filename='images/facebook.png')}}" alt=""></a>
+<div class="nav-bar row">
+    <div id="logo">
+        <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:5000/">Home</a></li>
+            <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
+            <li><a href="http://127.0.0.1:5000/projects">Projects</a></li>
+            <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </nav>
+</div>
+        <section class="header-main row">
+            <div class="col span-1-of-2">
+                <div class="name-socials">
+                    <h1>Vojtěch Dostál</h1>
                 </div>
-             </div>
+                    <div class="a-socials">
+                        <a href="https://github.com/Vojjtak" target=”_blank”><img  src="{{ url_for('static', filename='images/github.png')}}" alt=""></a>
+                        <a href="https://www.linkedin.com/in/vojt%C4%9Bch-dost%C3%A1l-1418a5280/" target=”_blank”><img src="{{ url_for('static', filename='images/linked-in.png')}}" alt=""></a>
+                        <a href="https://www.instagram.com/wojjtak/" target=”_blank”><img  src="{{ url_for('static', filename='images/instagram.png')}}" alt=""></a>
+                        <a href="https://www.facebook.com/vojtak.dostal/" target=”_blank”><img  src="{{ url_for('static', filename='images/facebook.png')}}" alt=""></a>
+                    </div>
+                </div>
 
-        <div class="col span-2-of-2">
-            <div class="me-front-image">
+
+        <div class="col span-1-of-2">
+            <div class="image-container">
                 <img src="{{ url_for('static', filename='images/me.jpg')}}" alt="">
             </div>
         </div>
-    </header>
+
+    </section>
+ </header>
 
 
-
-    <footer class="footer-page">
+<footer class="footer-page">
         <div class="row">
             <div class="socials">
                 <p><a href="#" target="_blank">Facebook</a></p>
