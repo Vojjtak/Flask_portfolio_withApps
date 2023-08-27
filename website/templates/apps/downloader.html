@@ -1,45 +1,53 @@
 {% extends "base.html" %}
 {% block title %}Ytb Download{% endblock %}
-
 {% block content %}
 <head>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/aboutme_styles.css')}}">
 </head>
 
-<style>
-    header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url(/static/images/bck-header.jpg);
-    background-size: cover;
-    height: 90vh;
-    background-attachment: fixed;
-}
-</style>
-
 <header class="about-me">
-    <div class="nav-bar row">
-        <div class="nav-bar row">
-                <div id="logo">
-                    <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
-                </div>
+    <div class="base-navigation">
+            <div class="nav-bar row">
+                    <div id="logo">
+                        <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
+                    </div>
+
+                <div class="navbar">
+
                 <nav>
                     <ul>
                         <li><a href="http://127.0.0.1:5000/">Home</a></li>
                         <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
-                        <li><a href="http://127.0.0.1:5000/projects">Projects</a></li>
                         <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+                        <li> <div class="dropdown">
+
+                                <button class="dropbtn">Projects
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+
+                                    <div class="dropdown-content">
+                                          <a href="http://127.0.0.1:5000/downloader">Youtube Downloader</a>
+                                          <a href="http://127.0.0.1:5000/downloader">Binance Trading Bot</a>
+                                          <a href="http://127.0.0.1:5000/downloader">Clip Maker</a>
+
+                                    </div>
+                             </div>
+                        </li>
                     </ul>
-                    <div class="clearfix"></div>
                 </nav>
+
+                </div>
             </div>
+            <!-------------------------- Floating cancel ------------------------------>
+            <div class="clearfix"></div>
+    </div>
+
 
         <div class="heading-main">
             <h2>YTB downloader - 1st version</h2>
         </div>
-    </div>
-<section>
-    <!-- search text and button -->
 
+    <!-- search text and button -->
         <div class="search row">
             <form id="search-form" method="post">
 
@@ -48,23 +56,18 @@
 
                 <div id="download" >
                     <form id="video-download-form" method="post">
-
+                        <!-- download button -->
                         <input type="hidden" value="Download video" name="submit">
                         <button type="button" id="download-button">Download video</button>
 
                     </form>
                 </div>
-
             </form><br>
         </div>
-
-
-
 
     <!-- display title and thumbnail -->
 
         <h2 id="preview_text">&darr;&darr;&darr; Title and thumbnail preview &darr;&darr;&darr;</h2><br>
-
 
         <div class="display">
 
@@ -73,44 +76,24 @@
 
             <img id="thumbnail" src="" alt="">
 
-
         </div>
-
-
-    <!-- download button -->
-
-</section>
-
 </header>
 
 <main>
     <section class="row">
-    <div id="data-title">
-        <table>
-            {% for item in title_display %}
-                <tr>
-                    <td>{{ item }}</td>
-                    <td>{{ url_display[loop.index0] }}</td>
-                    <td>{{ date_display[loop.index0] }}</td>
-                </tr>
-            {% endfor %}
-        </table>
-    </div>
-</section>
+        <div id="data-title">
+            <table>
+                {% for item in title_display %}
+                    <tr>
+                        <td>{{ item }}</td>
+                        <td>{{ url_display[loop.index0] }}</td>
+                        <td>{{ date_display[loop.index0] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
 
 </main>
-
-<footer class="footer-page">
-        <div class="row">
-            <div class="socials">
-                <p><a href="#" target="_blank">Facebook</a></p>
-                <p><a href="#" target="_blank">Instagram</a></p>
-            </div>
-
-            <div class="footer-text">
-                <p>Nečum sem</p>
-            </div>
-        </div>
-</footer>
 
 {% endblock %}

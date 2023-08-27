@@ -14,8 +14,6 @@ $(function() {
                 $("#thumbnail").attr("src", thumbnail).show();
                 $("#download").fadeIn(500);
 
-
-                // Set the URL in the hidden input field
                 $("#hidden_url").val(url);
             })
             .catch(function(error) {
@@ -54,6 +52,26 @@ function downloadVideo(url) {
         }
     });
 }
+
+  function email_sent_message() {
+            $.ajax({
+                url: "/contact_sent",
+                type: 'POST',
+                success: function(response) {
+                    var sent = response.sent;
+                    $("#sent").text(sent).fadeIn(500);
+                },
+                error: function(error) {
+                    console.log("Error sending email:", error);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            $("#sendEmailButton").click(function() {
+                email_sent_message();
+            });
+        });
 
 $(document).ready(function() {
     $(".dropdown").hover(

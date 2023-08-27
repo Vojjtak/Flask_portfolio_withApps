@@ -38,6 +38,15 @@ header {
     margin-top: 10px;
 }
 /****************************** Navigation ******************************/
+navigation {
+
+
+    url(/static/images/bck-header.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
 ul {
     margin-top: 16px;
 }
@@ -50,6 +59,7 @@ nav ul li {
     display: inline-block;
     margin-left: 20px;
     margin-top: 10px;
+    position: sticky;
 }
 
 .navbar ul li a:link,
@@ -71,6 +81,7 @@ nav ul li {
 .dropdown {
   overflow: hidden;
   width: 140px;
+  font-size: 5px;
 }
 
 .dropbtn {
@@ -83,8 +94,8 @@ nav ul li {
   border-radius: 4px;
   font-family: inherit;
   margin: 0;
-  position: fixed;
-  top: 20px;
+  position: relative;
+  top: 0px;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -94,18 +105,19 @@ nav ul li {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: transparent;
+  background-color: rgba(214, 121, 73, 1);
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
   z-index: 1;
-  max-height: 200px;
+  max-height: 500px;
   overflow-y: auto;
+  border-radius: 5px;
 }
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 0px 5px;
+  padding: 5px 5px;
   margin-top: 15px;
   text-decoration: none;
   display: block;
@@ -186,7 +198,17 @@ nav ul li {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/****************************** Email send message ******************************/
+#sent {
+    font-size: 20px;
+}
 
+#sendEmailButton {
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
 
 /****************************** Footer ******************************/
 

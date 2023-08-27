@@ -1,42 +1,38 @@
 {% extends "base.html" %}
 {% block title %}Vojjtak's portfolio Flask website{% endblock %}
 {% block content %}
-<head>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/index.css')}}">
-</head>
 
- <header>
+<header>
+    <div class="base-navigation">
+        <div class="nav-bar row">
+                <div id="logo">
+                    <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
+                </div>
 
-<div class="nav-bar row">
-    <div id="logo">
-        <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
-    </div>
-
-<div class="navbar">
-    <nav>
-        <ul>
-            <li><a href="http://127.0.0.1:5000/">Home</a></li>
-            <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
-            <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
-            <li> <div class="dropdown">
-                    <button class="dropbtn">Projects
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                          <a href="#">Youtube Downloader</a>
-                          <a href="#">Binance Trading Bot</a>
-                          <a href="#">Clip Maker</a>
-                    </div>
-              </div>
-            </li>
-        </ul>
+            <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                    <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
+                    <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+                    <li> <div class="dropdown">
+                            <button class="dropbtn">Projects
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                  <a href="http://127.0.0.1:5000/downloader">Youtube Downloader</a>
+                                  <a href="http://127.0.0.1:5000/downloader">Binance Trading Bot</a>
+                                  <a href="http://127.0.0.1:5000/downloader">Clip Maker</a>
+                            </div>
+                      </div>
+                    </li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+        <!-------------------------- Floating cancel ------------------------------>
         <div class="clearfix"></div>
-    </nav>
-</div>
-
-
-</div>
-
+    </div>
         <section class="header-main row">
             <div class="col span-1-of-2">
                 <div class="name-socials">
@@ -56,21 +52,7 @@
                 <img src="{{ url_for('static', filename='images/me.jpg')}}" alt="">
             </div>
         </div>
-
     </section>
- </header>
+</header>
 
-
-<footer class="footer-page">
-        <div class="row">
-            <div class="socials">
-                <p><a href="#" target="_blank">Facebook</a></p>
-                <p><a href="#" target="_blank">Instagram</a></p>
-            </div>
-
-            <div class="footer-text">
-                <p>Nečum sem</p>
-            </div>
-        </div>
-    </footer>
 {% endblock %}
