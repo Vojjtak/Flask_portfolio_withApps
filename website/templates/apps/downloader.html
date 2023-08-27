@@ -6,6 +6,16 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/aboutme_styles.css')}}">
 </head>
 
+<style>
+    header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(/static/images/bck-header.jpg);
+    background-size: cover;
+    height: 90vh;
+    background-attachment: fixed;
+}
+</style>
+
 <header class="about-me">
     <div class="nav-bar row">
         <div class="nav-bar row">
@@ -27,35 +37,68 @@
             <h2>YTB downloader - 1st version</h2>
         </div>
     </div>
-
+<section>
     <!-- search text and button -->
-    <div class="search">
-        <form id="search-form" method="post">
 
-            <input type="text" id="url-input" name="url"><br>
-            <input type="submit" value="Search video" name="submit">
-        </form><br>
-    </div>
+        <div class="search row">
+            <form id="search-form" method="post">
+
+                <input type="text" id="url-input" name="url"><br>
+                <input type="submit" value="Search video" name="submit">
+
+                <div id="download" >
+                    <form id="video-download-form" method="post">
+
+                        <input type="hidden" value="Download video" name="submit">
+                        <button type="button" id="download-button">Download video</button>
+
+                    </form>
+                </div>
+
+            </form><br>
+        </div>
+
+
+
 
     <!-- display title and thumbnail -->
-    <div class="display">
-        <div id="title" class="video-title"></div>
-        <img id="thumbnail" src="" alt="">
-    </div>
+
+        <h2 id="preview_text">&darr;&darr;&darr; Title and thumbnail preview &darr;&darr;&darr;</h2><br>
+
+
+        <div class="display">
+
+            <div id="title" class="video-title"></div>
+            <br>
+
+            <img id="thumbnail" src="" alt="">
+
+
+        </div>
+
 
     <!-- download button -->
-    <div id="download" >
-        <form id="video-download-form" method="post">
 
-            <input type="hidden" value="Download video" name="submit">
-            <button type="button" id="download-button">Download video</button>
-
-        </form>
-    </div>
-    <div id="data"></div>
-
+</section>
 
 </header>
+
+<main>
+    <section class="row">
+    <div id="data-title">
+        <table>
+            {% for item in title_display %}
+                <tr>
+                    <td>{{ item }}</td>
+                    <td>{{ url_display[loop.index0] }}</td>
+                    <td>{{ date_display[loop.index0] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</section>
+
+</main>
 
 <footer class="footer-page">
         <div class="row">

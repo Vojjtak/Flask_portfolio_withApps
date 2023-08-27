@@ -1,8 +1,6 @@
 $(function() {
+
     $("#download").hide();
-
-    displayData();
-
     $("#search-form").submit(function(event) {
         event.preventDefault();
         var url = $("#url-input").val();
@@ -14,7 +12,7 @@ $(function() {
 
                 $("#title").text(title).show();
                 $("#thumbnail").attr("src", thumbnail).show();
-                $("#download").show();
+                $("#download").fadeIn(500);
 
 
                 // Set the URL in the hidden input field
@@ -57,19 +55,14 @@ function downloadVideo(url) {
     });
 }
 
-function displayData() {
-    $.ajax({
-        url: '/data',
-        type: 'GET',
-        success: function(response) {
-            var textData = response.data_of_video;
-            console.log("Downloaded video:", textData); // Use textData here, not data_of_video
-            $('#data').text(textData);
+$(document).ready(function() {
+    $(".dropdown").hover(
+        function() {
+            $(".dropdown-content").finish().slideDown("slow");
         },
-        error: function(error) {
-            console.log("Error fetching data:", error); // Change the error message
+        function() {
+            $(".dropdown-content").finish().slideUp("slow");
         }
-    });
-}
-
+    );
+});
 

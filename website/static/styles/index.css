@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/****  reusable ****/
+/******************************  Reusable ******************************/
 .row {
     width: 960px;
     margin: 0 auto;
@@ -23,7 +23,7 @@
     margin: 20px auto;
 }
 
-/**** header ****/
+/****************************** Header ******************************/
 header {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url(/static/images/bck-header.jpg);
@@ -31,23 +31,29 @@ header {
     height: 100vh;
     background-attachment: fixed;
 }
-
+/********************************* Logo *********************************/
 #logo img{
     float: left;
     width: 5%;
     margin-top: 10px;
 }
+/****************************** Navigation ******************************/
+ul {
+    margin-top: 16px;
+}
+
 nav ul {
     float: right;
 }
+
 nav ul li {
     display: inline-block;
     margin-left: 20px;
     margin-top: 10px;
 }
 
-nav ul li a:link,
-nav ul li a:visited {
+.navbar ul li a:link,
+.navbar ul li a:visited {
     color: white;
     text-decoration: none;
     font-size: 25px;
@@ -55,12 +61,67 @@ nav ul li a:visited {
     border-bottom: 2px solid transparent;
 }
 
-nav ul li a:hover,
-nav ul li a:active {
+.navbar ul li a:hover,
+.navbar ul li a:active {
     transition: border-bottom 0.5s;
     border-bottom: 2px solid #D67949;
 }
 
+/****************************** Navigation Dropdown ******************************/
+.dropdown {
+  overflow: hidden;
+  width: 140px;
+}
+
+.dropbtn {
+  font-size: 25px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px 10px;
+  background-color: rgba(214, 121, 73, 0.7);
+  border-radius: 4px;
+  font-family: inherit;
+  margin: 0;
+  position: fixed;
+  top: 20px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  transition: border-bottom 0.5s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 0px 5px;
+  margin-top: 15px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  max-height: 200px; /* Adjust the maximum height as needed */
+  overflow-y: auto;
+}
+
+
+.dropdown-content a:hover {
+  background-color: transparent;
+}
+
+
+
+/****************************** Socials ******************************/
 .header-main {
     display: flex;
     align-items: center;
@@ -127,7 +188,7 @@ nav ul li a:active {
 }
 
 
-/*** Footer ***/
+/****************************** Footer ******************************/
 
 .footer-page {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),

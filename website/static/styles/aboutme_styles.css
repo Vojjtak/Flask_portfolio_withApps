@@ -31,15 +31,17 @@ header {
     height: 100vh;
     background-attachment: fixed;
 }
-
+/********************************* Logo *********************************/
 #logo img{
     float: left;
     width: 5%;
     margin-top: 10px;
 }
+/****************************** Navigation ******************************/
 nav ul {
     float: right;
 }
+
 nav ul li {
     display: inline-block;
     margin-left: 20px;
@@ -114,14 +116,42 @@ header p {
 
 /*** Video downloader YTB ***/
 
-.search {
-    text-align: center;
-}
 
-.search input {
+
+#url-input {
+    width: 80%;
     margin-top: 10px;
     margin-right: 10px;
+    margin-bottom: 30px;
     padding: 10px;
+    border-radius: 10px;
+}
+
+.search input[name="submit"] {
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 80px;
+    position: relative;
+    float: right;
+    bottom: 68px;
+}
+
+#download {
+    text-align: center;
+}
+#download-button {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    right: -130px;
+}
+
+#preview_text {
+    text-align: center;
+    color: white;
+    font-size: 30px;
 }
 
 .display {
@@ -136,22 +166,48 @@ header p {
     padding: 10px;
 }
 
-#download {
-    text-align: center;
+.display img {
+    width: 350px;
 }
 
-#download input{
-    text-align: center;
-    margin-top: 10px;
-    margin-right: 10px;
-    padding: 10px;
-    font-size: 30px;
-}
-
-#data {
+#data-title {
+    display: block;
     font-size: 10px;
-    text-align: center;
+    text-align: left;
     color: #fff;
+    margin: 0 auto;
+}
+
+#data-url p {
+    display: block;
+    font-size: 10px;
+    text-align: left;
+    color: #fff;
+    margin: 0 auto;
+}
+
+table {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    margin: 50px auto;
+}
+
+td {
+    font-size: 15px;
+    border:2px solid black;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.prd {
+    margin: 20px auto;
+}
+
+#thumbnail {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
 }
 
 /*** Footer ***/
