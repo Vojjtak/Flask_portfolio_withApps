@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, jsonify
 from downloader import *
 import smtplib
-from emailing import ssl, PASSWORD
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+from email.message import EmailMessage
+from emailing import PASSWORD, RECEIVER, SENDER
+import ssl
 
 
 app = Flask(__name__, template_folder='website/templates',
@@ -25,35 +25,34 @@ def projects():
     return render_template("projects.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["POST", "GET"])
 def contact():
     return render_template("contact.html")
 
 
 @app.route("/contact_sent", methods=["POST", "GET"])
 def send_email():
+
     if request.method == "POST":
-        context = ssl.create_default_context()
-        SENDER = "einexwow@gmail.com"
-        RECEIVER = "vodos@seznam.cz"
+        print(request.form)
+        try:
+            context = ssl.create_default_context()
+            message = request.form["messageinput"]
 
-        email_message = MIMEMultipart()
-        email_message['From'] = SENDER
-        email_message['To'] = RECEIVER
-        email_message['Subject'] = "ahoj"
+            email_message = EmailMessage()
+            email_message['Subject'] = request.form["nameinput"]
+            email_message.set_content(message)
 
-        email_message.attach(MIMEText("ahoj", 'plain'))
+            gmail = smtplib.SMTP("smtp.gmail.com", 587)
+            gmail.starttls(context=context)
+            gmail.login(SENDER, PASSWORD)
+            gmail.sendmail(request.form["nameinput"], RECEIVER, email_message.as_string())
+            gmail.quit()
 
-        with smtplib.SMTP("smtp.gmail.com", 587) as smtp:
-            smtp.starttls(context=context)
-            smtp.login(SENDER, PASSWORD)
-            smtp.sendmail(SENDER, "vodos@seznam.cz", email_message.as_string())
             sent = "Thank you for your message!"
             return jsonify({'sent': sent})
-
-
-if __name__ == '__main__':
-    app.run()
+        except Exception as e:
+            return jsonify({'error': str(e)})
 
 
 @app.route("/downloader", methods=["POST", "GET"])
