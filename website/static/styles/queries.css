@@ -1,11 +1,14 @@
 @media only screen and (max-width: 750px) {
 
+
 /*******  index.html *******/
 .header-main {
     margin-top: 80px;
 }
 
 #logo img{
+    float: left;
+    width: 100px;
     margin-left: 20px;
 }
 
@@ -30,5 +33,29 @@
     margin-left: 5px;
     margin-top: 15px;
 }
-/*******  about_me.html *******/
 }
+/*******  about_me.html *******/
+@media only screen and (max-width: 1060px) {
+.main-text p {
+    margin: 0 30px;
+}
+
+#logo img{
+    float: left;
+    width: 100px;
+    margin-left: 20px;
+}
+
+#about_us_header {
+    height: auto;
+}
+#about_me_text {
+    margin-bottom: 30px;
+}
+
+}
+
+/*******  contact.html  *******/
+
+
+

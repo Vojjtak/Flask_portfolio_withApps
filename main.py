@@ -29,6 +29,10 @@ def projects():
 def contact():
     return render_template("contact.html")
 
+@app.route("/imageresizer")
+def resizer():
+    return render_template("/apps/imageresizer.html")
+
 
 @app.route("/contact_sent", methods=["POST", "GET"])
 def send_email():

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Times New Roman;
 }
 /******************************  Reusable ******************************/
 .row {
@@ -24,17 +25,80 @@
 }
 
 /****************************** Header ******************************/
+
+
 header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url(/static/images/bck-header.jpg);
-    background-size: cover;
+    position: relative;
     height: 100vh;
+    overflow: hidden;
+}
+
+header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/static/images/bck-header.jpg);
+    background-size: cover;
+    opacity: 0.95;
+    z-index: -2;
+}
+
+header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+        rgba(0,0,0,0.497) 0%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.75) 50%,
+        rgba(0,0,0,0.497) 100%);
+    background-size: -7000px 100%;
     background-attachment: fixed;
+    animation: bg 40s linear infinite;
+    z-index: -1;
+}
+
+@keyframes bg {
+    0% {
+        background-position-x: -5000;
+    }
+    100% {
+        background-position-x: 5000px;
+    }
+}
+
+
+
+.main-text h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.main-text h2:after {
+    content: "";
+    display: block;
+    width: 250px;
+    border-bottom: 3px solid #D67949;
+    margin: 10px auto;
+    margin-bottom: 50px;
+}
+
+
+.main-text p {
+    color: white;
+    color: white;
+    font-size: 20px;
 }
 /********************************* Logo *********************************/
 #logo img{
     float: left;
-    max-width: 8vw;
+    max-width: 100px;
     margin-top: 10px;
 }
 /****************************** Navigation ******************************/
@@ -151,13 +215,12 @@ nav ul li {
     width: 100%;
     height: 100%;
 }
-
+/******************************* first img me *********************************/
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
-
 }
 
 
@@ -165,11 +228,16 @@ nav ul li {
     width: 80%;
     object-fit: contain;
     border-radius: 30px;
-    box-shadow: 1px 1px 10px black;
+    box-shadow: 10px 10px 20px black;
     margin-left: 30%;
     margin-top: 100px;
-
 }
+body {
+  margin: 0px;
+  background-color: #dbdbdb;
+}
+
+/******************************* first img me *********************************/
 
 .name-socials h1 {
     color: #fff;
@@ -205,16 +273,135 @@ nav ul li {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-/****************************** Email send message ******************************/
+/****************************** Contact ******************************/
 #sent {
     font-size: 20px;
 }
 
 #sendEmailButton {
-    max-width: 150px;
+    width: 200px;
     text-align: center;
     padding: 10px;
     margin-top: 10px;
+    border-radius: 5px;
+}
+
+.contact-me {
+    color: white;
+    display: block;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.contact-me input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    margin-top: 20px;
+    font-family: Arial;
+}
+
+.contact-me textarea {
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    margin-top: 20px;
+    font-family: Arial;
+}
+/****************************** YTB download ******************************/
+
+#url-input {
+    width: 80%;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search input[name="submit"] {
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 80px;
+    position: relative;
+    float: right;
+    bottom: 68px;
+    z-index: 1;
+}
+
+#download {
+    text-align: center;
+}
+#download-button {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    right: -130px;
+}
+
+#preview_text {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.display {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.display input{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.display img {
+    width: 350px;
+}
+
+#data-title {
+    display: block;
+    font-size: 10px;
+    text-align: left;
+    color: #fff;
+    margin: 0 auto;
+}
+
+#data-url p {
+    display: block;
+    font-size: 10px;
+    text-align: left;
+    color: #fff;
+    margin: 0 auto;
+}
+
+table {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    margin: 50px auto;
+}
+
+td {
+    font-size: 15px;
+    border:2px solid black;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.prd {
+    margin: 20px auto;
+}
+
+#thumbnail {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
 }
 
 /****************************** Footer ******************************/
@@ -226,16 +413,30 @@ nav ul li {
     margin-top: 0;
 }
 
-.socials p {
+.socials {
     text-align: center;
-    font-family: Arial;
+    margin-right: 7px;
+}
+
+.socials p {
     font-size: 10px;
+    display: inline-block;
+    margin-left: 7px;
+
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
 }
 
 .footer-text {
     color: white;
     text-align: center;
 }
+
+/***** animated background ****/
+
 
 /*** Stop floating ***/
 .clearfix{zoom: 1}

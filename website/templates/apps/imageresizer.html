@@ -40,57 +40,8 @@
     </div>
 
 
-        <div class="main-text">
-            <h2>YTB downloader - 1st version</h2>
-        </div>
-
-    <!-- search text and button -->
-        <div class="search row">
-            <form id="search-form" method="post">
-
-                <input type="text" id="url-input" name="url"><br>
-                <input type="submit" value="Search video" name="submit">
-
-                <div id="download" >
-                    <form id="video-download-form" method="post">
-                        <!-- download button -->
-                        <input type="hidden" value="Download video" name="submit">
-                        <button type="button" id="download-button">Download video</button>
-
-                    </form>
-                </div>
-            </form><br>
-        </div>
-
-    <!-- display title and thumbnail -->
-
-        <h2 id="preview_text">&darr;&darr;&darr; Title and thumbnail preview &darr;&darr;&darr;</h2><br>
-
-        <div class="display">
-
-            <div id="title" class="video-title"></div>
-            <br>
-
-            <img id="thumbnail" src="" alt="">
-
-        </div>
 </header>
 
-<main>
-    <section class="row">
-        <div id="data-title">
-            <table>
-                {% for item in title_display %}
-                    <tr>
-                        <td>{{ item }}</td>
-                        <td>{{ url_display[loop.index0] }}</td>
-                        <td>{{ date_display[loop.index0] }}</td>
-                    </tr>
-                {% endfor %}
-            </table>
-        </div>
-    </section>
 
-</main>
 
 {% endblock %}
