@@ -5,7 +5,7 @@
 }
 /******************************  Reusable ******************************/
 .row {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -18,7 +18,7 @@
 .heading-main h2:after {
     content: "";
     display: block;
-    width: 150px;
+    width: 100%;
     border-bottom: 5px solid #D67949;
     margin: 20px auto;
 }
@@ -34,7 +34,7 @@ header {
 /********************************* Logo *********************************/
 #logo img{
     float: left;
-    width: 5%;
+    max-width: 8vw;
     margin-top: 10px;
 }
 /****************************** Navigation ******************************/
@@ -80,8 +80,10 @@ nav ul li {
 /****************************** Navigation Dropdown ******************************/
 .dropdown {
   overflow: hidden;
-  width: 140px;
+  width: 100%;
   font-size: 5px;
+  position: static;
+  top: 10px;
 }
 
 .dropbtn {
@@ -93,9 +95,9 @@ nav ul li {
   background-color: rgba(214, 121, 73, 0.7);
   border-radius: 4px;
   font-family: inherit;
-  margin: 0;
-  position: relative;
-  top: 0px;
+  position: absolute;
+  top: -27px;
+
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -108,17 +110,20 @@ nav ul li {
   background-color: rgba(214, 121, 73, 1);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
-  z-index: 1;
-  max-height: 500px;
+  z-index: 2;
+  max-height: 400px;
   overflow-y: auto;
   border-radius: 5px;
+  position: absolute;
+  top: 12px;
+
 }
 
 .dropdown-content a {
   float: none;
-  color: black;
   padding: 5px 5px;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -128,7 +133,7 @@ nav ul li {
 
 
 .dropdown-content a:hover {
-  background-color: transparent;
+  background-color: #FF7045;
 }
 
 
@@ -141,8 +146,8 @@ nav ul li {
 
 .name-socials {
     text-align: center;
-    display: flex;
-    align-items: center;
+    display: block;
+    text-align: center;
     width: 100%;
     height: 100%;
 }
@@ -151,31 +156,33 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    margin-right: 50px;
+
 }
 
 
 .image-container img {
-    max-width: 80%;
-    max-height: 80%;
+    width: 80%;
     object-fit: contain;
     border-radius: 30px;
     box-shadow: 1px 1px 10px black;
     margin-left: 30%;
     margin-top: 100px;
+
 }
 
 .name-socials h1 {
     color: #fff;
-    font-size: 53px;
+    font-size: 55px;
+    max-width: 100%;
 }
 
 .a-socials {
-    margin-left: 11px;
+    margin-left: 0;
+    text-align: center;
 }
 .a-socials img {
-    width: 11%;
+    width: 12%;
     margin-left: 20px;
     margin-top: 15px;
 }
@@ -204,7 +211,7 @@ nav ul li {
 }
 
 #sendEmailButton {
-    width: 150px;
+    max-width: 150px;
     text-align: center;
     padding: 10px;
     margin-top: 10px;

@@ -1,0 +1,34 @@
+@media only screen and (max-width: 750px) {
+
+/*******  index.html *******/
+.header-main {
+    margin-top: 80px;
+}
+
+#logo img{
+    margin-left: 20px;
+}
+
+.image-container img {
+    width: 80%
+}
+
+.name-socials h1 {
+    color: #fff;
+    font-size: 35px;
+    max-width: 100%;
+    margin-left: 20px;
+    margin-top: 100px;
+}
+
+.a-socials {
+    margin-left: 20px;
+}
+
+.a-socials img {
+    width: 40px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+/*******  about_me.html *******/
+}

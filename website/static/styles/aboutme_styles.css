@@ -56,6 +56,7 @@ nav ul li a:visited {
     transition: border-bottom 1s;
     border-bottom: 2px solid transparent;
 }
+/****************************** Navigation Dropdown ******************************/
 
 nav ul li a:hover,
 nav ul li a:active {
@@ -74,22 +75,6 @@ header p {
 
 }
 
-.project-links a{
-    display: block;
-    margin-top: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-}
-
-.project-links a:hover {
-    display: block;
-    margin-top: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    text-shadow: 4px 4px 10px white;
-}
 
 .contact-me {
     color: white;
@@ -135,6 +120,7 @@ header p {
     position: relative;
     float: right;
     bottom: 68px;
+    z-index: 1;
 }
 
 #download {

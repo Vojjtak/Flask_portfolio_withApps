@@ -55,24 +55,25 @@ function downloadVideo(url) {
 
   function email_sent_message() {
            var formData = {
-        nameinput: $("input[name=nameinput]").val(),
-        emailinput: $("input[name=emailinput]").val(),
-        messageinput: $("textarea[name=messageinput]").val()
-    };
 
-    $.ajax({
-        url: "/contact_sent",
-        type: 'POST',
-        data: formData,  // Send the form data
-        success: function(response) {
-            var sent = response.sent;
-            $("#sent").text(sent).fadeIn(500);
-        },
-        error: function(error) {
-            console.log("Error sending email:", error);
+            nameinput: $("input[name=nameinput]").val(),
+            emailinput: $("input[name=emailinput]").val(),
+            messageinput: $("textarea[name=messageinput]").val()
+            };
+
+            $.ajax({
+                url: "/contact_sent",
+                type: 'POST',
+                data: formData,  // Send the form data
+                success: function(response) {
+                    var sent = response.sent;
+                    $("#sent").text(sent).fadeIn(500);
+                },
+                error: function(error) {
+                    console.log("Error sending email:", error);
+                }
+            });
         }
-    });
-}
 
 $(document).ready(function() {
     $("#sendEmailButton").click(function() {
