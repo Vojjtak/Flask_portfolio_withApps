@@ -4,6 +4,7 @@ import smtplib
 from email.message import EmailMessage
 from emailing import PASSWORD, RECEIVER, SENDER
 import ssl
+import resizer
 
 
 app = Flask(__name__, template_folder='website/templates',
@@ -30,9 +31,13 @@ def contact():
     return render_template("contact.html")
 
 @app.route("/imageresizer")
-def resizer():
+def img_res():
     return render_template("/apps/imageresizer.html")
-
+@app.route("/imageresizer", methods=["POST"])
+def resize():
+    if request.method == "POST":
+        resizer.resize_image(request.form["type"])
+        return render_template("/apps/imageresizer.html")
 
 @app.route("/contact_sent", methods=["POST", "GET"])
 def send_email():

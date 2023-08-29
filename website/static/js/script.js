@@ -91,3 +91,28 @@ $(document).ready(function() {
         }
     );
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var elem = document.querySelector('input[type="range"][name="1"]');
+
+    var rangeValue = function(){
+        var newValue = elem.value;
+        var target = document.querySelector('.value_horizontal');
+        target.innerHTML = 'Width '+ newValue + '%';
+
+    }
+
+    elem.addEventListener("input", rangeValue);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var elem = document.querySelector('input[type="range"][name="2"]');
+
+    var rangeValue = function(){
+        var newValue = elem.value;
+        var target = document.querySelector('.value_vertical');
+        target.innerHTML = 'Height ' + newValue + '%';
+    }
+
+    elem.addEventListener("input", rangeValue);
+});

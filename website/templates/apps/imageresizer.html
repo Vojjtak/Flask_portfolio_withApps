@@ -24,7 +24,7 @@
 
                                     <div class="dropdown-content">
                                           <a href="http://127.0.0.1:5000/downloader">Youtube Downloader</a>
-                                          <a href="http://127.0.0.1:5000/downloader">Binance Trading Bot</a>
+                                          <a href="http://127.0.0.1:5000/imageresizer">Image Resizer</a>
                                           <a href="http://127.0.0.1:5000/downloader">Clip Maker</a>
 
                                     </div>
@@ -39,6 +39,31 @@
             <div class="clearfix"></div>
     </div>
 
+<section class="resizer_section row">
+
+        <div class="post_image">
+            <form method="post">
+            <div class="resizer_buttons">
+
+                <input type="submit" value="Insert Image" name="insert">
+                <input type="submit" value="Save Image" name="save">
+            </div>
+                <div class="slidecontainer_width">
+                    <div class="value_horizontal">Width 0%</div>
+                    <input type="range" min="-100" max="100" step="1" value="0" class="horizontal_slider" id="width" name="1">
+
+                </div>
+                <div class="slidecontainer_height">
+                    <div class="value_vertical">Height 0%</div>
+                    <input type="range" min="-100" max="100" step="1" value="0" class="vertical_slider row" id="height" name="2">
+                </div>
+
+
+
+            </form>
+        </div>
+
+</section>
 
 </header>
 
