@@ -21,6 +21,23 @@ $(function() {
             });
     });
 
+    $(document).ready(function() {
+        $("#image_name").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "/get_img_path",
+                success: function(response) {
+                    var name = response.image_name;
+                    $("#img_result").attr("src", "/static/temp/" +  name).show();
+
+                },
+                error: function() {
+                    $("#imagePathResult").text("Error getting image path.");
+                }
+            });
+        });
+    });
+
     $("#download-button").click(function(event) {
         event.preventDefault();
         var url = $("#url-input").val(); // Get the URL from the hidden input
@@ -29,12 +46,27 @@ $(function() {
 });
 
 
+function fetchImgPath(image_path) {
+    return $.ajax({
+        url: '/get_title',
+        type: 'POST',
+        data: {url: url}
+    });
+}
 
 function fetchTitleAndThumbnail(url) {
     return $.ajax({
         url: '/get_title',
         type: 'POST',
         data: {url: url}
+    });
+}
+
+function showImage(image) {
+    return $.ajax({
+    image : '/choose_image',
+    type: 'POST',
+    data: {url: url}
     });
 }
 
@@ -104,6 +136,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     elem.addEventListener("input", rangeValue);
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     var elem = document.querySelector('input[type="range"][name="2"]');

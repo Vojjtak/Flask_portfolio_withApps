@@ -12,7 +12,7 @@ def data_save(url):
     db = (title, url, date)
     connection = sqlite3.connect("database.db")
     cursor = connection.cursor()
-    cursor.execute("insert into downloads values (?,?,?)", db)
+    cursor.execute("INSERT INTO downloads VALUES (?,?,?)", db)
     connection.commit()
     connection.close()
 

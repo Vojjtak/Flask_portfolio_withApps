@@ -10,34 +10,20 @@ import resizer
 app = Flask(__name__, template_folder='website/templates',
             static_folder='website/static')
 
-
+# HOME #
 @app.route("/")
 def home():
     return render_template('index.html')
 
-
+# ABOUT ME #
 @app.route("/about_me")
 def about():
     return render_template("about-me.html")
 
-
-@app.route("/projects")
-def projects():
-    return render_template("projects.html")
-
-
+# CONTACT #
 @app.route("/contact", methods=["POST", "GET"])
 def contact():
     return render_template("contact.html")
-
-@app.route("/imageresizer")
-def img_res():
-    return render_template("/apps/imageresizer.html")
-@app.route("/imageresizer", methods=["POST"])
-def resize():
-    if request.method == "POST":
-        resizer.resize_image(request.form["type"])
-        return render_template("/apps/imageresizer.html")
 
 @app.route("/contact_sent", methods=["POST", "GET"])
 def send_email():
@@ -64,6 +50,7 @@ def send_email():
             return jsonify({'error': str(e)})
 
 
+# VIDEO DOWNLOADER YTB #
 @app.route("/downloader", methods=["POST", "GET"])
 def search():
     title_display = data_title()
@@ -95,7 +82,24 @@ def download():
         data_save(request.form["url"])
         return jsonify({'video': video})
 
+# IMAGE RESIZER #
+@app.route("/imageresizer")
+def img_res():
+    return render_template("/apps/imageresizer.html")
+
+
+@app.route("/get_img_path", methods=['POST'])
+def img_path():
+    if request.method == "POST":
+        image_name = resizer.choose_image()
+        return jsonify({'image_name': image_name})
+
+# EXCEL ART #
+
+@app.route("/excelart")
+def excel_art():
+    return render_template("apps/excel_art.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
-    send_email()

@@ -38,29 +38,33 @@
             <!-------------------------- Floating cancel ------------------------------>
             <div class="clearfix"></div>
     </div>
-
+    <div class="insert_button">
+        <button id="image_name">Get Image Path</button>
+    </div>
 <section class="resizer_section row">
 
         <div class="post_image">
-            <form method="post">
-            <div class="resizer_buttons">
+            <form method="post" id="findimage">
 
-                <input type="submit" value="Insert Image" name="insert">
-                <input type="submit" value="Save Image" name="save">
-            </div>
                 <div class="slidecontainer_width">
                     <div class="value_horizontal">Width 0%</div>
                     <input type="range" min="-100" max="100" step="1" value="0" class="horizontal_slider" id="width" name="1">
+                    <div class="value_vertical">Height 0%</div>
+
+                    <div class="res_img">
+                        <img id="img_result" src="">
+                    </div>
 
                 </div>
                 <div class="slidecontainer_height">
-                    <div class="value_vertical">Height 0%</div>
+
                     <input type="range" min="-100" max="100" step="1" value="0" class="vertical_slider row" id="height" name="2">
                 </div>
-
-
-
+                
             </form>
+
+
+
         </div>
 
 </section>

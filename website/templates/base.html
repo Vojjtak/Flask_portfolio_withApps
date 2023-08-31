@@ -4,45 +4,28 @@
     <meta charset="UTF-8">
 <!-- View -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Grid -->
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/grid/grid.css')}}">
-
-<!-- Lightbox photo gallery (not using yet) -->
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/lightbox.min.css')}}">
-    <script src="{{url_for('static', filename='js/lightbox-plus-jquery.min.js')}}"></script>
-
+<!-- Title -->
+    <title>{% block title %}{% endblock %}</title>
 <!-- Title image -->
     <link rel="icon" type="image/png" href="{{url_for('static', filename='images/harold.png')}}">
-
-<!-- Jquery - first script for downloader to non-refresh -->
+<!-- Grid -->
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/grid/grid.css')}}">
+<!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/queries.css')}}">
+<!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
             integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
             crossorigin="anonymous"></script>
 
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Style for navbar -->
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/index.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/queries.css')}}">
-
-<!-- Title -->
-    <title>{% block title %}{% endblock %}</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
 <body>
-
 
 {% block content %}
 {% endblock %}
