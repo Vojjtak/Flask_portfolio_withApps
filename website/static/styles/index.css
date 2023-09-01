@@ -10,30 +10,21 @@
     margin: 0 auto;
 }
 
-.heading-main h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 30px;
+
+/********************************* Logo *********************************/
+#logo img{
+    float: left;
+    max-width: 100px;
+    margin-top: 10px;
 }
 
-.heading-main h2:after {
-    content: "";
-    display: block;
-    width: 100%;
-    border-bottom: 5px solid #D67949;
-    margin: 20px auto;
-}
-
-/****************************** Header ******************************/
-
-
+/****************************** BODY ******************************/
 header {
     position: relative;
-    height: 100vh;
     overflow: hidden;
 }
 
-header:before {
+body:before {
     content: "";
     position: absolute;
     top: 0;
@@ -46,7 +37,7 @@ header:before {
     z-index: -2;
 }
 
-header:after {
+body:after {
     content: "";
     position: absolute;
     top: 0;
@@ -71,49 +62,7 @@ header:after {
     }
 }
 
-
-
-.main-text h2 {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 30px;
-    color: #fff;
-}
-
-.main-text h2:after {
-    content: "";
-    display: block;
-    width: 250px;
-    border-bottom: 3px solid #D67949;
-    margin: 10px auto;
-    margin-bottom: 50px;
-}
-
-
-.main-text p {
-    color: white;
-    color: white;
-    font-size: 20px;
-}
-/********************************* Logo *********************************/
-#logo img{
-    float: left;
-    max-width: 100px;
-    margin-top: 10px;
-}
 /****************************** Navigation ******************************/
-navigation {
-
-
-    url(/static/images/bck-header.jpg);
-    background-size: cover;
-    height: 100vh;
-    background-attachment: fixed;
-}
-
-nav {
-
-}
 
 ul {
     margin-top: 16px;
@@ -188,9 +137,11 @@ nav ul li {
   top: 38px;
 
 }
+
 .dropdown-content p {
     font-size: 20px;
 }
+
 .dropdown-content a {
   float: none;
   padding: 5px 10px;
@@ -204,14 +155,16 @@ nav ul li {
   overflow-y: auto;
 }
 
-
 .dropdown-content a:hover {
   background-color: #FF7045;
 }
 
 
-
 /****************************** Socials ******************************/
+main {
+    height: 90vh;
+}
+
 .header-main {
     display: flex;
     align-items: center;
@@ -224,29 +177,6 @@ nav ul li {
     width: 100%;
     height: 100%;
 }
-/******************************* first img me *********************************/
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
-}
-
-
-.image-container img {
-    width: 80%;
-    object-fit: contain;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px black;
-    margin-left: 30%;
-    margin-top: 100px;
-}
-body {
-  margin: 0px;
-  background-color: #dbdbdb;
-}
-
-/******************************* first img me *********************************/
 
 .name-socials h1 {
     color: #fff;
@@ -282,150 +212,42 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-/****************************** Contact ******************************/
-#sent {
-    font-size: 20px;
+
+/******************************* first img me *********************************/
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
 }
 
-#sendEmailButton {
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-}
 
-.contact-me {
-    color: white;
-    display: block;
-    max-width: 400px;
-    text-align: center;
-    margin: 20px auto;
-}
-
-.contact-me input {
-    border-radius: 5px;
-    padding: 5px;
-    width: 400px;
-    margin-top: 20px;
-    font-family: Arial;
-}
-
-.contact-me textarea {
-    border-radius: 5px;
-    padding: 5px;
-    width: 400px;
-    margin-top: 20px;
-    font-family: Arial;
-}
-/****************************** YTB download ******************************/
-
-#last {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 40px;
-}
-
-#url-input {
+.image-container img {
     width: 80%;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 30px;
-    padding: 10px;
-    border-radius: 10px;
+    object-fit: contain;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px black;
+    margin-left: 30%;
+    margin-top: 100px;
 }
 
-.search input[name="submit"] {
-    width: 180px;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 80px;
-    position: relative;
-    float: right;
-    bottom: 68px;
-    z-index: 1;
-}
 
-#download {
-    text-align: center;
-}
-#download-button {
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-    right: -130px;
-}
-
-#preview_text {
-    text-align: center;
-    color: white;
-    font-size: 30px;
-}
-
-.display {
-    font-size: 30px;
-    color: #fff;
-    text-align: center;
-}
-
-.display input{
-    margin-top: 10px;
-    margin-right: 10px;
-    padding: 10px;
-}
-
-.display img {
-    width: 350px;
-}
-
-#data-title {
-    display: block;
-    font-size: 10px;
-    text-align: left;
-    color: #fff;
-    margin: 0 auto;
-}
-
-#data-url p {
-    display: block;
-    font-size: 10px;
-    text-align: left;
-    color: #fff;
-    margin: 0 auto;
-}
-
-table {
-    color: black;
-    font-size: 15px;
-    text-align: center;
-    width: 100%;
-    margin: 50px auto;
-}
-
-td {
-    font-size: 15px;
-    border:2px solid black;
-    margin-top: 50px;
-    padding: 10px;
-}
-
-.prd {
-    margin: 20px auto;
-}
-
-#thumbnail {
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px black;
-}
 
 /****************************** Footer ******************************/
+footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:40px;
+   background: rgba(250,250,250,0.1);
+}
 
 .footer-page {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url(/static/images/bck-header.jpg);
     opacity: 0.7;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .socials {
@@ -448,119 +270,6 @@ td {
 .footer-text {
     color: white;
     text-align: center;
-}
-
-
-/************************* image resizer *****************************/
-/************************* HORIZONTAL SLIDER *****************************/
-.sliders {
-    display: block;
-    margin: 0 auto;
-    height: 0;
-}
-
-
-#slider_height {
-    height: 60%;
-    max-width: 920px;
-    display: grid;
-    margin: 0 20px 20px 20px;
-    position: absolute;
-    top: 300px;
-}
-
-#value_height {
-    font-size: 20px;
-    color: white;
-    position: relative;
-    text-align: center;
-    top: -70px;
-    display: block;
-    margin-right: 20px;
-}
-/************************* VERTICAL SLIDER *****************************/
-#slider_width {
-    width: 80%;
-    display: block;
-    margin: 20px auto 20px auto;
-}
-
-#value_width {
-    font-size: 20px;
-    color: white;
-    float: left;
-    margin-left: 10px;
-
-}
-/**************************** RESIZER BUTTON *********************/
-.resizer_buttons {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-input[name="save"] {
-text-align: center;
-padding: 10px;
-margin-left: 50px;
-margin-right: 10px;
-}
-
-input[name="insert"]{
-text-align: center;
-padding: 10px;
-margin-right: 10px;
-}
-
-.value_horizontal {
-    font-size: 15px;
-    font-family: Arial;
-    color: white;
-    text-align: center;
-}
-
-.value_vertical {
-    font-size: 15px;
-    font-family: Arial;
-    color: white;
-}
-.image-to-resize img{
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width: auto;
-}
-
-
-.res_img img {
-    display: block;
-    margin: 40px auto 0 auto;
-    max-width: 400px;
-}
-
-.res_img {
-    margin-top: 80px;
-}
-
-.insert_button {
-    text-align: center;
-}
-
-#image_name {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-family: Arial;
-    font-size: 15px;
-    margin-right: 250px;
-}
-
-#resize_button {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-family: Arial;
-    font-size: 15px;
-    margin-left: 50px;
 }
 
 

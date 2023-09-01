@@ -1,45 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Ytb Download{% endblock %}
 {% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/ytb.css')}}">
+</head>
 
 <header class="about-me">
-    <div class="base-navigation">
-            <div class="nav-bar row">
-                    <div id="logo">
-                        <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
-                    </div>
-
-                <div class="navbar">
-
-                <nav>
-                    <ul>
-                        <li><a href="http://127.0.0.1:5000/">Home</a></li>
-                        <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
-                        <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
-                        <li class="roll"> <div class="dropdown">
-
-                                <button class="dropbtn">Projects
-                                    <i class="fa fa-caret-down"></i>
-                                </button>
-
-                                    <div class="dropdown-content">
-                                          <a href="http://127.0.0.1:5000/downloader"><p>YouTube Downloader</p></a>
-                                          <a href="http://127.0.0.1:5000/imageresizer"><p>Image Resizer</p></a>
-                                          <a href="http://127.0.0.1:5000/downloader"><p>Clip Maker</p></a>
-                                          <a href="http://127.0.0.1:5000/excelart"><p>Excel Pixel Art</p></a>
-
-                                    </div>
-                             </div>
-                        </li>
-                    </ul>
-                </nav>
-
-                </div>
-            </div>
-            <!-------------------------- Floating cancel ------------------------------>
-            <div class="clearfix"></div>
-    </div>
-
 
         <div class="main-text">
             <h2>YTB downloader - 1st version</h2>
@@ -79,8 +45,7 @@
 
 <main>
 
-
-    <section class="row">
+    <section class="last_downloads row">
         <h2 id="last"> Last downloads </h2>
         <div id="data-title">
 
@@ -97,5 +62,6 @@
     </section>
 
 </main>
+
 
 {% endblock %}

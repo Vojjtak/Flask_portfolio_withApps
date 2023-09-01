@@ -13,6 +13,7 @@
 <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/index.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/styles/queries.css')}}">
+
 <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
             integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -29,24 +30,56 @@
 </head>
 
 <body>
+    <nav class="row">
+                <div id="logo">
+                    <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
+                </div>
+
+            <div class="navbar">
+
+                    <ul>
+                        <li><a href="http://127.0.0.1:5000/">Home</a></li>
+                        <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
+                        <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
+                        <li class="roll"> <div class="dropdown row">
+                                <button class="dropbtn">Projects
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                      <a href="http://127.0.0.1:5000/downloader"><p>YouTube Downloader</p></a>
+                                      <a href="http://127.0.0.1:5000/imageresizer"><p>Image Resizer</p></a>
+                                      <a href="http://127.0.0.1:5000/downloader"><p>Clip Maker</p></a>
+                                      <a href="http://127.0.0.1:5000/excelart"><p>Excel Pixel Art</p></a>
+                                </div>
+                          </div>
+                        </li>
+                    </ul>
+            </div>
+    </nav>
+    <!-------------------------- Floating cancel ------------------------------>
+    <div class="clearfix"></div>
 
 {% block content %}
 {% endblock %}
 
-<footer class="footer-page">
-        <div class="row">
-            <div class="socials">
-                <p><a href="https://github.com/Vojjtak" target="_blank">Github</a></p>
-                <p><a href="https://www.instagram.com/wojjtak/" target="_blank">Instagram</a></p>
-                <p><a href="https://www.facebook.com/vojtak.dostal/" target="_blank">Facebook</a></p>
-                <p><a href="https://www.linkedin.com/in/vojt%C4%9Bch-dost%C3%A1l-1418a5280/" target="_blank">Linked-in</a></p>
-            </div>
 
-            <div class="footer-text">
-                <p>Vojjtak's portfolio website &copy;</p>
-            </div>
+<footer id="footer">
+   <div class="opa">
+    <div class="row">
+        <div class="socials">
+            <p><a href="https://github.com/Vojjtak" target="_blank">Github</a></p>
+            <p><a href="https://www.instagram.com/wojjtak/" target="_blank">Instagram</a></p>
+            <p><a href="https://www.facebook.com/vojtak.dostal/" target="_blank">Facebook</a></p>
+            <p><a href="https://www.linkedin.com/in/vojt%C4%9Bch-dost%C3%A1l-1418a5280/" target="_blank">Linked-in</a></p>
         </div>
-    </footer>
+
+        <div class="footer-text">
+            <p>Vojjtak's portfolio website &copy;</p>
+        </div>
+    </div>
+   </div>
+</footer>
 
 </body>
+
 </html>
