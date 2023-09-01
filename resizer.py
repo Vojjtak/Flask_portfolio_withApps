@@ -6,7 +6,10 @@ import os
 
 
 def choose_image():
-    image_path = tk.filedialog.askopenfilename()
+    root = tk.Tk()
+    root.withdraw()
+    root.attributes("-topmost", True)
+    image_path = tk.filedialog.askopenfilename(parent=root)
     name = os.path.split(image_path)
     img = Image.open(image_path)
     img.save(f"website/static/temp/{name[1]}")

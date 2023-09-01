@@ -5,6 +5,7 @@ from email.message import EmailMessage
 from emailing import PASSWORD, RECEIVER, SENDER
 import ssl
 import resizer
+from bs4 import BeautifulSoup
 
 
 app = Flask(__name__, template_folder='website/templates',
@@ -88,11 +89,14 @@ def img_res():
     return render_template("/apps/imageresizer.html")
 
 
-@app.route("/get_img_path", methods=['POST'])
+@app.route("/get_img_path", methods=['POST', 'GET'])
 def img_path():
     if request.method == "POST":
         image_name = resizer.choose_image()
+        print(request.form.get("sliderValue"))
         return jsonify({'image_name': image_name})
+
+
 
 # EXCEL ART #
 

@@ -2,6 +2,7 @@
 
 
 /*******  index.html *******/
+
 .header-main {
     margin-top: 80px;
 }
@@ -34,6 +35,7 @@
     margin-top: 15px;
 }
 }
+
 /*******  about_me.html *******/
 @media only screen and (max-width: 1060px) {
 .main-text p {
@@ -55,6 +57,24 @@
 
 }
 
+/*******  Resizer  *******/
+
+@media only screen and (max-width: 550px) {
+    .res_img{
+        margin: 45px 30px;
+    }
+    .res_img img {
+        width: 80%;
+    }
+
+    #slider_height {
+        height: 40%;
+    }
+
+    #img_result {
+        margin: 0 auto;
+    }
+}
 /*******  contact.html  *******/
 
 

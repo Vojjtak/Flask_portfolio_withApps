@@ -40,7 +40,7 @@ $(function() {
 
     $("#download-button").click(function(event) {
         event.preventDefault();
-        var url = $("#url-input").val(); // Get the URL from the hidden input
+        var url = $("#url-input").val();
         downloadVideo(url);
     });
 });
@@ -124,29 +124,3 @@ $(document).ready(function() {
     );
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    var elem = document.querySelector('input[type="range"][name="1"]');
-
-    var rangeValue = function(){
-        var newValue = elem.value;
-        var target = document.querySelector('.value_horizontal');
-        target.innerHTML = 'Width '+ newValue + '%';
-
-    }
-
-    elem.addEventListener("input", rangeValue);
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    var elem = document.querySelector('input[type="range"][name="2"]');
-
-    var rangeValue = function(){
-        var newValue = elem.value;
-        var target = document.querySelector('.value_vertical');
-        target.innerHTML = 'Height ' + newValue + '%';
-    }
-
-    elem.addEventListener("input", rangeValue);
-});

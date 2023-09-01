@@ -2,8 +2,9 @@
 {% block title %}Ytb Download{% endblock %}
 {% block content %}
 
+
 <header class="about-me">
-    <div class="base-navigation">
+
             <div class="nav-bar row">
                     <div id="logo">
                         <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
@@ -16,16 +17,17 @@
                         <li><a href="http://127.0.0.1:5000/">Home</a></li>
                         <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
                         <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
-                        <li> <div class="dropdown">
+                        <li class="roll"> <div class="dropdown row">
 
                                 <button class="dropbtn">Projects
                                     <i class="fa fa-caret-down"></i>
                                 </button>
 
                                     <div class="dropdown-content">
-                                          <a href="http://127.0.0.1:5000/downloader">Youtube Downloader</a>
-                                          <a href="http://127.0.0.1:5000/imageresizer">Image Resizer</a>
-                                          <a href="http://127.0.0.1:5000/downloader">Clip Maker</a>
+                                          <a href="http://127.0.0.1:5000/downloader"><p>YouTube Downloader</p></a>
+                                          <a href="http://127.0.0.1:5000/imageresizer"><p>Image Resizer</p></a>
+                                          <a href="http://127.0.0.1:5000/downloader"><p>Clip Maker</p></a>
+                                          <a href="http://127.0.0.1:5000/excelart"><p>Excel Pixel Art</p></a>
 
                                     </div>
                              </div>
@@ -37,40 +39,75 @@
             </div>
             <!-------------------------- Floating cancel ------------------------------>
             <div class="clearfix"></div>
-    </div>
+
+
     <div class="insert_button">
-        <button id="image_name">Get Image Path</button>
+        <button id="image_name" name="ahoj">Insert Image</button>
+
+        <button id="resize_button">Resize and Download</button>
+
     </div>
-<section class="resizer_section row">
-
-        <div class="post_image">
-            <form method="post" id="findimage">
-
-                <div class="slidecontainer_width">
-                    <div class="value_horizontal">Width 0%</div>
-                    <input type="range" min="-100" max="100" step="1" value="0" class="horizontal_slider" id="width" name="1">
-                    <div class="value_vertical">Height 0%</div>
-
-                    <div class="res_img">
-                        <img id="img_result" src="">
-                    </div>
-
-                </div>
-                <div class="slidecontainer_height">
-
-                    <input type="range" min="-100" max="100" step="1" value="0" class="vertical_slider row" id="height" name="2">
-                </div>
-                
-            </form>
 
 
+
+
+
+<section class="">
+    <div class="row">
+        <div class="sliders">
+
+        <div id="slider_height"></div>
+        <div id="slider_width"></div>
+
+        <div id="value_width">0</div>
+        <div id="value_height">0</div>
+        <input type="hidden" id="slider_value" name="slider_value" value="0">
+        </div>
+
+
+         <div class="res_img">
+
+            <img id="img_result" src="">
 
         </div>
+</div>
 
 </section>
 
 </header>
 
+<script>
+
+$("#slider_height").slider(
+{
+            value:0,
+            min: -100,
+            max: 100,
+            step: 1,
+            orientation: "vertical",
+            slide: function( event, ui ) {
+                $( "#value_width" ).html( ui.value + "%" );
+                $("#slider_value").val(ui.value);
+            }
+}
+
+);$("#slider_width").slider(
+{
+            value:0,
+            min: -100,
+            max: 100,
+            step: 1,
+            orientation: "horizontal",
+            slide: function( event, ui ) {
+                $( "#value_height" ).html( ui.value + "%" );
+
+            }
+        }
+);
+
+
+
+</script>
 
 
 {% endblock %}

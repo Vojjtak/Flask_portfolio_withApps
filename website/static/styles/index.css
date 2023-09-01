@@ -111,6 +111,10 @@ navigation {
     background-attachment: fixed;
 }
 
+nav {
+
+}
+
 ul {
     margin-top: 16px;
 }
@@ -122,8 +126,6 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin-left: 20px;
-    margin-top: 10px;
-    position: sticky;
 }
 
 .navbar ul li a:link,
@@ -142,6 +144,11 @@ nav ul li {
 }
 
 /****************************** Navigation Dropdown ******************************/
+.roll {
+    position: relative;
+    top: 10px;
+}
+
 .dropdown {
   overflow: hidden;
   width: 100%;
@@ -159,8 +166,8 @@ nav ul li {
   background-color: rgba(214, 121, 73, 0.7);
   border-radius: 4px;
   font-family: inherit;
-  position: absolute;
-  top: -27px;
+  position: inherit;
+  margin-right: 20px;
 
 }
 
@@ -172,25 +179,27 @@ nav ul li {
   display: none;
   position: absolute;
   background-color: rgba(214, 121, 73, 1);
-  min-width: 160px;
+  width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
   z-index: 2;
   max-height: 400px;
   overflow-y: auto;
   border-radius: 5px;
-  position: absolute;
-  top: 12px;
+  top: 38px;
 
 }
-
+.dropdown-content p {
+    font-size: 20px;
+}
 .dropdown-content a {
   float: none;
-  padding: 5px 5px;
+  padding: 5px 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   text-decoration: none;
   display: block;
-  text-align: left;
+  text-align: center;
+  font-size: 10px;
   max-height: 200px; /* Adjust the maximum height as needed */
   overflow-y: auto;
 }
@@ -310,6 +319,12 @@ body {
     font-family: Arial;
 }
 /****************************** YTB download ******************************/
+
+#last {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+}
 
 #url-input {
     width: 80%;
@@ -438,86 +453,44 @@ td {
 
 /************************* image resizer *****************************/
 /************************* HORIZONTAL SLIDER *****************************/
-
-/* The slider itself */
-.horizontal_slider {
-    border-radius: 5px;
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
-  width: 80%; /* Full-width */
-  height: 25px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
-}
-
-/* Mouse-over effects */
-.horizontal_slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.horizontal_slider::-webkit-slider-thumb {
-    border-radius: 5px;
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-.horizontal_slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
-
-#width {
+.sliders {
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
+    height: 0;
 }
 
+
+#slider_height {
+    height: 60%;
+    max-width: 920px;
+    display: grid;
+    margin: 0 20px 20px 20px;
+    position: absolute;
+    top: 300px;
+}
+
+#value_height {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    text-align: center;
+    top: -70px;
+    display: block;
+    margin-right: 20px;
+}
 /************************* VERTICAL SLIDER *****************************/
-  .vertical_slider {
-        appearance: none;
-        width: 583px;
-        height: 25px;
-        float: left;
-        display: block;
-        margin: -130px 0px 0px 30px;
-        border-radius: 5px;
-        background: #d3d3d3;
-        outline: none;
-        opacity: 0.7;
-        transition: opacity 0.2s;
-        transform: rotate(270deg);
-        transform-origin: left;
-    }
-
-    .vertical_slider:hover {
-  opacity: 1; /* Fully shown on mouse-over */
+#slider_width {
+    width: 80%;
+    display: block;
+    margin: 20px auto 20px auto;
 }
 
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.vertical_slider::-webkit-slider-thumb {
-    border-radius: 5px;
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
+#value_width {
+    font-size: 20px;
+    color: white;
+    float: left;
+    margin-left: 10px;
 
-.vertical_slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
-  cursor: pointer; /* Cursor on hover */
 }
 /**************************** RESIZER BUTTON *********************/
 .resizer_buttons {
@@ -557,24 +530,39 @@ margin-right: 10px;
     width: auto;
 }
 
+
 .res_img img {
     display: block;
-    margin: 20px auto 0 auto;
+    margin: 40px auto 0 auto;
+    max-width: 400px;
 }
 
 .res_img {
-    margin: 30px auto 0px auto;
-    width: 500px;
-    height: 700px;
+    margin-top: 80px;
 }
 
 .insert_button {
     text-align: center;
-    margin-bottom: 20px;
 }
+
 #image_name {
+    text-align: center;
+    margin-bottom: 20px;
     padding: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    margin-right: 250px;
 }
+
+#resize_button {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 15px;
+    margin-left: 50px;
+}
+
 
 /*** Stop floating ***/
 .clearfix{zoom: 1}
