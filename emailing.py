@@ -1,3 +1,3 @@
 SENDER = "einexwow@gmail.com"
-PASSWORD = "gafafvkgvegqxhet"
+PASSWORD = "gafafvk********
 RECEIVER = "vodos@seznam.cz"
