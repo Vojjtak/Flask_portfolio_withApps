@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c676cfd-fdc3-419d-9c6e-e922f4832d36" name="Changes" comment="nvm" />
+    <list default="true" id="7c676cfd-fdc3-419d-9c6e-e922f4832d36" name="Changes" comment="nvm2">
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,7 +63,39 @@
       <option name="project" value="LOCAL" />
       <updated>1693757878098</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="nvm">
+      <option name="closed" value="true" />
+      <created>1693767475875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693767475875</updated>
+    </task>
+    <task id="LOCAL-00004" summary="nvm2">
+      <option name="closed" value="true" />
+      <created>1693767592896</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693767592896</updated>
+    </task>
+    <task id="LOCAL-00005" summary="nvm2">
+      <option name="closed" value="true" />
+      <created>1693767664626</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693767664626</updated>
+    </task>
+    <task id="LOCAL-00006" summary="nvm2">
+      <option name="closed" value="true" />
+      <created>1693767764972</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693767764972</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -70,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nvm" />
-    <option name="LAST_COMMIT_MESSAGE" value="nvm" />
+    <MESSAGE value="nvm2" />
+    <option name="LAST_COMMIT_MESSAGE" value="nvm2" />
   </component>
 </project>
