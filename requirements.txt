@@ -28,5 +28,5 @@ stone==3.3.1
 tk==0.1.0
 typing_extensions==4.7.1
 urllib3==2.0.4
-Werkzeug==2.3.7
+Werkzeug==2.2.3
 zope.interface==6.0
