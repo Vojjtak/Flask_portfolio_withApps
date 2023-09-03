@@ -9,12 +9,14 @@ def create_app():
     from .contact import contact
     from .downloader import downloader
     from .excelart import excelarts
+    from .resizer import resizer
 
     app.register_blueprint(views, url_preflix='/')
     app.register_blueprint(auth, url_preflix='/')
     app.register_blueprint(contact, url_preflix='/')
     app.register_blueprint(downloader, url_preflix='/')
     app.register_blueprint(excelarts, url_preflix='/')
+    app.register_blueprint(resizer, url_preflix='/')
 
     return app
 

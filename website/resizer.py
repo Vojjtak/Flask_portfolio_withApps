@@ -3,6 +3,19 @@ import tkinter.filedialog
 import cv2
 from PIL import Image
 import os
+from flask import Blueprint, render_template, request, jsonify
+
+resizer = Blueprint("resizer", __name__)
+
+@resizer.route("/imageresizer")
+def img_resizer():
+    return render_template("apps/imageresizer.html")
+
+@resizer.route("/get_img_path", methods=['POST'])
+def img_path():
+    if request.method == "POST":
+        image_name = choose_image()
+        return jsonify({'image_name': image_name})
 
 
 def choose_image():
