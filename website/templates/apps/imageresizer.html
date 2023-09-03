@@ -2,112 +2,32 @@
 {% block title %}Ytb Download{% endblock %}
 {% block content %}
 
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/resizer.css')}}">
+</head>
 
 <header class="about-me">
 
-            <div class="nav-bar row">
-                    <div id="logo">
-                        <a href="http://127.0.0.1:5000/"><img src="{{ url_for('static', filename='images/logos.png')}}" alt=""></a>
-                    </div>
 
-                <div class="navbar">
-
-                <nav>
-                    <ul>
-                        <li><a href="http://127.0.0.1:5000/">Home</a></li>
-                        <li><a href="http://127.0.0.1:5000/about_me">About me</a></li>
-                        <li><a href="http://127.0.0.1:5000/contact">Contact</a></li>
-                        <li class="roll"> <div class="dropdown row">
-
-                                <button class="dropbtn">Projects
-                                    <i class="fa fa-caret-down"></i>
-                                </button>
-
-                                    <div class="dropdown-content">
-                                          <a href="http://127.0.0.1:5000/downloader"><p>YouTube Downloader</p></a>
-                                          <a href="http://127.0.0.1:5000/imageresizer"><p>Image Resizer</p></a>
-                                          <a href="http://127.0.0.1:5000/downloader"><p>Clip Maker</p></a>
-                                          <a href="http://127.0.0.1:5000/excelart"><p>Excel Pixel Art</p></a>
-
-                                    </div>
-                             </div>
-                        </li>
-                    </ul>
-                </nav>
-
-                </div>
-            </div>
-            <!-------------------------- Floating cancel ------------------------------>
-            <div class="clearfix"></div>
-
-
+<!-------- Preview ------->
     <div class="insert_button">
         <button id="image_name" name="ahoj">Insert Image</button>
-
-        <button id="resize_button">Resize and Download</button>
-
     </div>
 
 
 
+    <form action="" method="post">
+        <input type="radio" name="dimensions">
+        <label for="dimensions">Keep dimensions</label>
 
+        <input type="text" placeholder="Width" name="width">
+        <input type="text" placeholder="Height" name="height">
+    </form>
 
-<section class="">
-    <div class="row">
-        <div class="sliders">
-
-        <div id="slider_height"></div>
-        <div id="slider_width"></div>
-
-        <div id="value_width">0</div>
-        <div id="value_height">0</div>
-        <input type="hidden" id="slider_value" name="slider_value" value="0">
-        </div>
-
-
-         <div class="res_img">
-
-            <img id="img_result" src="">
-
-        </div>
-</div>
-
-</section>
+    <div class="res_img">
+        <img id="img_result" src="">
+    </div>
 
 </header>
-
-<script>
-
-$("#slider_height").slider(
-{
-            value:0,
-            min: -100,
-            max: 100,
-            step: 1,
-            orientation: "vertical",
-            slide: function( event, ui ) {
-                $( "#value_width" ).html( ui.value + "%" );
-                $("#slider_value").val(ui.value);
-            }
-}
-
-);$("#slider_width").slider(
-{
-            value:0,
-            min: -100,
-            max: 100,
-            step: 1,
-            orientation: "horizontal",
-            slide: function( event, ui ) {
-                $( "#value_height" ).html( ui.value + "%" );
-
-            }
-        }
-);
-
-
-
-</script>
-
 
 {% endblock %}

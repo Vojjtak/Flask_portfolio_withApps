@@ -11,7 +11,8 @@ $(function() {
                 var thumbnail = response.thumbnail;
 
                 $("#title").text(title).show();
-                $("#thumbnail").attr("src", thumbnail).show();
+                $("#thumbnail").attr("src", thumbnail).hide();
+                $("#thumbnail").fadeIn();
                 $("#download").fadeIn(500);
 
                 $("#hidden_url").val(url);
@@ -28,7 +29,8 @@ $(function() {
                 url: "/get_img_path",
                 success: function(response) {
                     var name = response.image_name;
-                    $("#img_result").attr("src", "/static/temp/" +  name).show();
+                    $("#img_result").attr("src", "/static/temp/" +  name).hide();
+                    $("#img_result").fadeIn()
 
                 },
                 error: function() {
