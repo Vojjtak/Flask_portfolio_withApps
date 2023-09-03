@@ -1,0 +1,37 @@
+/************************* image resizer *********************************/
+
+.insert_button {
+    text-align: center;
+}
+
+.insert_button button {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+form {
+    text-align: center;
+}
+
+form input[name="width"] {
+    width: 70px;
+    padding: 5px;
+}
+form input[name="height"] {
+    width: 70px;
+    padding: 5px;
+}
+
+form label {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.res_img img{
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 300px;
+}
+
+

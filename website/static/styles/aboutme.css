@@ -1,0 +1,30 @@
+/****** About me *****/
+
+.main-text h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.main-text h2:after {
+    content: "";
+    display: block;
+    width: 250px;
+    border-bottom: 3px solid #D67949;
+    margin: 10px auto;
+    margin-bottom: 50px;
+}
+
+.main-text p {
+    color: white;
+    color: white;
+    font-size: 20px;
+}
+
+.name-socials h1 {
+    color: #fff;
+    font-size: 55px;
+    max-width: 100%;
+}
+

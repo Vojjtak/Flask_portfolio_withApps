@@ -1,0 +1,36 @@
+/****************************** Contact ******************************/
+#sent {
+    font-size: 20px;
+}
+
+#sendEmailButton {
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.contact-me {
+    color: white;
+    display: block;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.contact-me input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    margin-top: 20px;
+    font-family: Arial;
+}
+
+.contact-me textarea {
+    border-radius: 5px;
+    padding: 5px;
+    width: 400px;
+    margin-top: 20px;
+    font-family: Arial;
+}
