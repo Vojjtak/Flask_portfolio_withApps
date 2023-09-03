@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Video-clip-maker.iml" filepath="$PROJECT_DIR$/.idea/Video-clip-maker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Flask_portfolio_withApps.iml" filepath="$PROJECT_DIR$/.idea/Flask_portfolio_withApps.iml" />
     </modules>
   </component>
 </project>
