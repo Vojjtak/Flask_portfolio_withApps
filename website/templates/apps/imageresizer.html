@@ -13,20 +13,38 @@
     <div class="insert_button">
         <button id="image_name" name="ahoj">Insert Image</button>
     </div>
+    <form action="">
+    <div class="img_down"></div>
+    <input type="hidden" id="neco" name="neco">
+    </form>
 
+    <div class="save_and_download">
+        <button id="save" name="save">Download resized image</button>
+    </div>
+    <div id="confirmation"></div>
 
 
     <form action="" method="post">
-        <input type="radio" name="dimensions">
-        <label for="dimensions">Keep dimensions</label>
 
+
+        <div id="width_img"></div>
         <input type="text" placeholder="Width" name="width">
-        <input type="text" placeholder="Height" name="height">
+
+        <div id="height_img"></div>
+        <input type="text" placeholder="Height" name="height"><br>
+
+        <div id="radio">
+            <input type="radio" name="dimensions">
+            <label for="dimensions">Keep dimensions</label>
+        </div>
     </form>
 
     <div class="res_img">
         <img id="img_result" src="">
     </div>
+
+
+
 
 </header>
 

@@ -29,8 +29,34 @@ $(function() {
                 url: "/get_img_path",
                 success: function(response) {
                     var name = response.image_name;
+                    var width = response.width
+                    var height = response.height
+                    var path = ("/static/temp/" + name)
                     $("#img_result").attr("src", "/static/temp/" +  name).hide();
                     $("#img_result").fadeIn()
+                    $("#img_down").text("/static/temp/" +  name).hide();
+                    $("#height_img").text("Original height  " + height).show()
+                    $("#width_img").text("Original width  " + width).show()
+                    $("#neco").val(path)
+
+
+                },
+                error: function() {
+                    $("#imagePathResult").text("Error getting image path.");
+                }
+            });
+        });
+    });
+
+    $(document).ready(function() {
+        $("#save").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "/save_image",
+                success: function(response) {
+                    var message = response.save_confirmation;
+
+                    $("#confirmation").text(message).show();
 
                 },
                 error: function() {

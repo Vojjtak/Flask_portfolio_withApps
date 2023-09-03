@@ -16,16 +16,22 @@ form {
 form input[name="width"] {
     width: 70px;
     padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 form input[name="height"] {
     width: 70px;
     padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 form label {
     color: white;
-    font-size: 20px;
-    margin-right: 20px;
+}
+
+#radio {
+    margin-top: 20px;
 }
 
 .res_img img{
@@ -34,4 +40,16 @@ form label {
     width: 300px;
 }
 
+#width_img {
+    color: white;
+    font-size: 20px;
+    display: contents;
 
+}
+
+#height_img {
+    color: white;
+    font-size: 20px;
+    display: contents;
+
+}

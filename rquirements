@@ -1,0 +1,11 @@
+flask
+ssl
+cv2
+PIL
+os
+tkinter
+tkinter.filedialog
+smtplib
+email.message
+pytube
+datetime

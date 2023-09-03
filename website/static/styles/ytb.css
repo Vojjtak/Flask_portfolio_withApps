@@ -22,8 +22,12 @@
 
 header {
     position: relative;
-    height: 90vh;
+    height: 85vh;
     overflow: hidden;
+}
+
+main {
+    background: #E1DDE1;
 }
 /****************************** YTB download ******************************/
 
