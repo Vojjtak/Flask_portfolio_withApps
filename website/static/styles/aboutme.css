@@ -28,3 +28,43 @@
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    color: green;
+    border-bottom: 1px solid green;
+}
+
+#images-util {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#images-util img {
+    background: rgba(250,250,250,0.1);
+    border-radius: 10px;
+    height: 90px;
+    display: inline-block;
+}
+
+#htmlcss {
+    padding: 10px  10px 10px 10px;
+}
+
+
+
+#flask {
+    width: 100px;
+    background: rgba(250,250,250,0.1);
+    border-radius: 10px;
+    height: 90px;
+    padding: 10px 0 10px 0;
+}
+
+#python {
+    width: 85px;
+    padding: 10px 5px 5px 8px;
+}
